@@ -92,7 +92,7 @@ function BlogsUserPage(props) {
         <div className={classes.MainSectionSecondary}>
           <div className={classes.ImagePrimary}>
             <img
-              src={`http://localhost:5000/uploads/images/${image}`}
+              src={`${process.env.REACT_APP_BACKEND_URL}/uploads/images/${image}`}
               alt='evant name'
             />
           </div>

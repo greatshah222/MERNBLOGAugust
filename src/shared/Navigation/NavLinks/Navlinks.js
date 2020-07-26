@@ -81,7 +81,7 @@ function Navlinks(props) {
             className={classes.NavLinkProfileImage}
           >
             <img
-              src={`http://localhost:5000/uploads/user/${userData.image}`}
+              src={`${process.env.REACT_APP_BACKEND_URL}/uploads/user/${userData.image}`}
               alt={userData.name}
               className={classes.userProfileImage}
             />
