@@ -20,7 +20,7 @@ function PlaceBasedOnUserId() {
     const fetchPlace = async () => {
       try {
         const res = await fetchData(
-          `http://localhost:5000/api/v1/places/user/${userID}`,
+          `${process.env.REACT_APP_BACKEND_URL}/api/v1/places/user/${userID}`,
           'GET'
         );
 

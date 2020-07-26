@@ -12,7 +12,10 @@ function Logout() {
     let attemptLogout;
     try {
       attemptLogout = async () => {
-        await fetchData('http://localhost:5000/api/v1/users/logout', 'GET');
+        await fetchData(
+          `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/logout`,
+          'GET'
+        );
 
         toast.success('Logout successful');
 

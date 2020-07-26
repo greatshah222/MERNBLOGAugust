@@ -43,7 +43,7 @@ function Login() {
 
     try {
       const res = await fetchData(
-        'http://localhost:5000/api/v1/users/login',
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/login`,
         'POST',
         {
           email,

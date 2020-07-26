@@ -55,7 +55,7 @@ function Signup() {
       formData.append('image', Image.value);
       // custom hook
       const res = await fetchData(
-        'http://localhost:5000/api/v1/users/signup',
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/signup`,
         'POST',
         formData,
         {

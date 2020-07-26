@@ -38,7 +38,7 @@ function App() {
     try {
       fetchToken = async () => {
         const res = await fetchData(
-          'http://localhost:5000/api/v1/users/gettoken',
+          `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/gettoken`,
           'GET'
         );
         if (res.data.token && res.data.currentUser._id) {

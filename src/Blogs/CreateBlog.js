@@ -52,9 +52,14 @@ function Blog() {
       formData.append('description', Description.value);
       formData.append('address', Address.value);
 
-      await fetchData('http://localhost:5000/api/v1/places', 'POST', formData, {
-        'Content-Type': 'multipart/form-data',
-      });
+      await fetchData(
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/places`,
+        'POST',
+        formData,
+        {
+          'Content-Type': 'multipart/form-data',
+        }
+      );
 
       toast.success('New Place added');
       setTimeout(() => {
