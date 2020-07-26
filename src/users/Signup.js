@@ -62,8 +62,9 @@ function Signup() {
           'Content-Type': 'multipart/form-data',
         }
       );
+      console.log(res);
 
-      await login(res.data.token, res.data.user._id, res.data.user);
+      await login(res.data.user._id, res.data.token, res.data.user);
       toast.success('Welcome to this Forum');
     } catch (error) {
       toast.error(error.response.data.message);
