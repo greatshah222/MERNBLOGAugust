@@ -1,0 +1,176 @@
+/* for the background color of the form and image */
+
+.formPrimary {
+  background-color: rgba(36, 33, 33, 0.603);
+  width: 100vw;
+  height: 100vh;
+}
+/* // for image and form to align flex */
+.formSecondary {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* // image  */
+.formSecondary img {
+  height: 60vh;
+  width: 40vw;
+  display: flex;
+}
+/* main form */
+
+form {
+  width: 70%;
+  height: auto;
+  margin: 10% 15%;
+  border: 2px solid whitesmoke;
+  background-color: white;
+  padding: 20px;
+}
+
+/* //form blog is for big text area input like creatign blogs */
+.formBlog {
+  width: 50%;
+  height: auto;
+  margin: 5% 20%;
+}
+
+/* // input of form */
+.formSecondary input,
+.formSecondary textarea {
+  padding: 11px 10px;
+  border: none;
+}
+
+.formSecondary textarea::placeholder,
+.formSecondary input::placeholder {
+  font-family: initial;
+  font-size: initial;
+}
+/* // focus of input */
+.formSecondary input:focus,
+.formSecondary textarea:focus {
+  outline: none;
+}
+/* // icon and input together */
+
+.formInput {
+  width: 80%;
+  background: rgba(31, 35, 35, 0.03);
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  align-items: center;
+  padding-left: 15px;
+  border: 1px solid rgba(31, 94, 180, 0.22);
+  border-radius: 4px;
+  margin: 30px auto;
+}
+
+/* // invalid form input */
+.formInputInvalid {
+  background-color: red;
+  color: white;
+}
+/* // focusing the whole icon and input when focused upon inpu */
+.formInput:focus-within {
+  background-color: rgba(51, 12, 158, 0.151);
+  border: 1px solid blue;
+}
+
+/* // h2 */
+.formHeader {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.formHeader::after {
+  height: 4px;
+  display: block;
+  content: '';
+  width: 120px;
+  background-color: var(--mainBlack);
+  margin: 20px auto 0 auto;
+}
+
+/* // link textxx */
+.linkText {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 80%;
+  margin-top: 20px;
+}
+/* // for image file button margin */
+.formInputImageUploadInput {
+  margin-left: 20px;
+}
+
+@media (max-width: 799px) {
+  form {
+    width: 60%;
+    height: auto;
+    margin: 10% 20%;
+    border: 2px solid white;
+    background-color: white;
+    padding: 20px;
+  }
+  .formSecondary img {
+    display: none;
+  }
+  .formBlog {
+    width: 80%;
+    height: auto;
+    margin: 10%;
+  }
+}
+@media (max-width: 1025px) {
+  .formSecondary img {
+    width: 30%;
+  }
+  .formBlog {
+    width: 80%;
+    margin: 10%;
+  }
+  form {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .formSecondary img {
+    display: none;
+  }
+  form {
+    border: 2px solid white;
+    background-color: white;
+    padding: 20px;
+  }
+  .formInput {
+    width: 100%;
+  }
+  .formBlog {
+    width: 90%;
+    margin: 5%;
+  }
+  .formSecondary {
+    margin: 0;
+  }
+}
+@media (max-width: 470px) {
+  form {
+    border: 2px solid white;
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+  }
+  .formBlog {
+    margin: 2.5%;
+    width: 95%;
+  }
+
+  .formInput {
+    width: 100%;
+  }
+}

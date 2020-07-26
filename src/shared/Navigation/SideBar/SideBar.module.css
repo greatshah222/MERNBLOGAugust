@@ -1,0 +1,39 @@
+/* // it has z-index higher than backdrop which has 10 */
+.SlideInLeft-enter {
+  transform: translateX(-100%);
+}
+.SlideInLeft-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 200ms;
+}
+.SlideInLeft-exit {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.SlideInLeft-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 200ms;
+}
+/* // till 900px it will be like this */
+@media (max-width: 900px) {
+  .SideBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    color: black;
+  }
+}
+/* // if the width is more than 901 px it will have display of none */
+@media (min-width: 901px) {
+  .SideBar {
+    display: none;
+  }
+}

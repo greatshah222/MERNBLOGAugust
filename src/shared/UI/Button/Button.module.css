@@ -1,0 +1,123 @@
+/* // removing links decoraation if it is inside the btn */
+
+.Button a {
+  text-decoration: none;
+  color: inherit;
+}
+.Button {
+  padding: 10px 15px;
+  font-size: 120%;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--mainBlue);
+  background-color: var(--mainWhite);
+  text-align: center;
+  border-radius: 50px;
+}
+
+.Button:hover {
+  background-color: var(--mainBlue);
+
+  color: var(--mainWhite);
+  transition: 0.2s ease-in-out;
+}
+.Primary {
+  color: var(--mainWhite);
+  background-color: var(--mainBlue);
+}
+.Primary:hover {
+  color: var(--mainBlue);
+  background-color: var(--mainWhite);
+  border: 1px solid var(--mainBlue);
+  transition: 0.2s ease-in-out;
+}
+.Danger {
+  color: red;
+  background-color: var(--mainWhite);
+  border: 1px solid red;
+}
+.Danger:hover {
+  color: var(--mainWhite);
+  background-color: red;
+  border: 1px dashed var(--mainWhite);
+}
+/* // map button */
+.map {
+  padding: 10px 20px !important;
+  border: 2px solid var(--mainBlue);
+}
+.Button:disabled,
+.Button:hover:disabled,
+.Button.active:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.login {
+  width: 80%;
+  margin: auto 10%;
+  background-color: var(--mainBlack);
+  color: var(--mainWhite);
+}
+.login:hover {
+  background-color: rgba(0, 0, 0, 0.774);
+}
+.login:disabled,
+.login:hover:disabled {
+  cursor: not-allowed;
+}
+/* // not button but for just links wwith no outline */
+.link {
+  padding: 10px 25px;
+  font-size: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--mainYellow);
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+.link:hover {
+  background-color: transparent;
+  color: var(--mainBlue);
+  border: none;
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  .Button {
+    padding: 6px 10px;
+  }
+  .map {
+    padding: 10px 40px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .Button {
+    padding: 10px 10px;
+  }
+  .map {
+    padding: 10px 40px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .Button {
+    padding: 7px 10px;
+  }
+  .map {
+    padding: 10px 40px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .login {
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+  }
+  .map {
+    padding: 10px 40px !important;
+  }
+}

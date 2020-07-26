@@ -1,0 +1,96 @@
+.MainSectionPrimary {
+  display: grid;
+
+  /* // auto fit means if there is the space for the remainging item to be placed it will take up the whole space without leaving any empty gap but auto-fill leaves empty gap  */
+  grid-template-columns: repeat(auto-fit, minmax(min(300px), 1fr));
+
+  width: 80%;
+  grid-gap: 40px;
+  margin: auto;
+  margin-top: 5vh;
+}
+.MainSectionSecondary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  overflow: hidden;
+  max-height: 80vh;
+}
+.TextContainerPrimary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  min-height: 40vh;
+  text-align: center;
+}
+
+.TextContainerPrimary > * {
+  padding: 10px 0;
+}
+
+.ImagePrimary img {
+  object-fit: fill;
+  width: 60%;
+  margin: 10px 20%;
+}
+
+.ButtonPrimary {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 200px;
+}
+/* // delete and edit button */
+.ButtonDelete {
+  background-color: var(--mainShadow);
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+
+  align-items: center;
+}
+/* // button of modal */
+.Blog__ButtonModal {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  margin: 0 10%;
+}
+
+@media (max-width: 800px) {
+  .MainSectionPrimary {
+    width: 90%;
+    margin: auto;
+    margin-top: 5vh;
+  }
+}
+@media (max-width: 702px) {
+  .MainSectionPrimary {
+    width: 95%;
+    margin: auto;
+    margin-top: 5vh;
+  }
+}
+@media (max-width: 685px) {
+  .MainSectionPrimary {
+    width: 60%;
+    margin: auto;
+    /* padding: 40px; */
+    margin-top: 5vh;
+  }
+}
+@media (max-width: 450px) {
+  .MainSectionPrimary {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    /* padding: 40px; */
+    margin-top: 5vh;
+  }
+}

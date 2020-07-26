@@ -1,0 +1,189 @@
+/* hamburger menu for smaller screen */
+.HamBurgerMenu {
+  width: 1.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.HamBurgerMenu span {
+  display: block;
+  width: 2rem;
+  height: 2.5px;
+  background: white;
+}
+
+/* for logo to be beside the hamburger menu */
+.logoSmallerScreen {
+  position: relative;
+  color: white;
+}
+.logoSmallerScreen::after {
+  content: '';
+  height: 3.5rem;
+  width: 5rem;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(-6%, -22%);
+  /* // for the text to be above after logo */
+  mix-blend-mode: overlay;
+}
+.MobileNav {
+  height: 100%;
+}
+/* // till here */
+
+.navContainer {
+  background-color: var(--mainBlue);
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  min-height: 8vh;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+  padding: 1rem;
+  margin: auto;
+  width: 80%;
+}
+.logo {
+  flex: 1;
+  /* // for inserting image on top of this text */
+  position: relative;
+  color: white;
+}
+
+.logo::after {
+  content: '';
+  height: 4.5rem;
+  width: 5rem;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(-7%, -22%);
+  /* // for the text to be above after logo */
+  mix-blend-mode: overlay;
+}
+.navUl {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+  list-style: none;
+  color: white;
+}
+.navUl a {
+  color: white;
+  text-decoration: none;
+  font-size: 120%;
+  padding: 12px;
+  border-radius: 28px;
+  font-weight: 500;
+}
+
+.navUl a.active,
+.navUl a:hover,
+.navUl a:active {
+  background-color: var(--mainShadow);
+}
+.navUl li {
+  display: flex;
+  align-items: center;
+}
+/* // profile image  height and widht*/
+.userProfileImage {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* // navLink and profile image aligning flex */
+.NavLinkProfileImage {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* // distance of imgae from the Navlink */
+.NavLinkProfileImage img {
+  margin-right: 0.4rem;
+}
+
+@media (max-width: 1024px) {
+  .navUl {
+    flex: 4;
+  }
+}
+
+@media (max-width: 1225px) {
+  nav {
+    width: 100%;
+  }
+}
+
+/* // for height 900 make mobile screen */
+
+@media (min-width: 900px) {
+  .HamBurgerMenu {
+    display: none;
+  }
+  .logoSmallerScreen {
+    display: none;
+  }
+}
+
+/* // closing side bar bar button when inside the sideBar */
+.closeSideBarButton {
+  font-size: 4rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  color: #ccc;
+  float: right;
+  margin-right: 20px;
+}
+.closeSideBarButton:hover {
+  color: black;
+}
+/* // till 900px */
+@media (max-width: 900px) {
+  .DesktopNav {
+    display: none;
+  }
+  .navUl {
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    margin: 0;
+    margin-top: -200px;
+
+    padding: 0;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .navUl a.active,
+  .navUl a:hover,
+  .navUl a:active {
+    background-color: var(--mainBlack);
+    color: white;
+    padding: 15px;
+  }
+  .navUl a {
+    color: black;
+    font-size: 130%;
+  }
+  .logo {
+    display: none;
+  }
+}
