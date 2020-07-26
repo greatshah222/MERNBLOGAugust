@@ -7,8 +7,7 @@ function Map(props) {
   const mapRef = useRef();
 
   useEffect(() => {
-    mapboxgl.accessToken =
-      'pk.eyJ1IjoiYmlzaGx1IiwiYSI6ImNrYTZudXY4eDAxcWYyeG16dHBrcmFqNXgifQ.sP57BolySBydnCi36njfQg';
+    mapboxgl.accessToken = process.env.REACT_APP_MAP_TOKEN;
 
     const map = new mapboxgl.Map({
       container: mapRef.current,
